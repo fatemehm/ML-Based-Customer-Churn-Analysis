@@ -148,7 +148,7 @@ if st.button("Predict"):
     display_df = feature_importance[['Feature', 'SHAP Value', 'Feature Value']].copy()
     display_df['SHAP Value'] = display_df['SHAP Value'].apply(lambda x: f"{x:.4f}")
     display_df['Feature Value'] = display_df['Feature Value'].apply(lambda x: f"{x:.4f}")
-    st.dataframe(display_df.reset_index(drop=True), width='stretch')
+    st.dataframe(display_df.reset_index(drop=True), use_container_width=True)
 
 # Display feature importance
 st.write("---")
