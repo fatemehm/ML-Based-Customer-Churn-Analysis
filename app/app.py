@@ -7,6 +7,7 @@ import numpy as np
 from pathlib import Path
 from sklearn.preprocessing import LabelEncoder
 import warnings
+import inspect
 warnings.filterwarnings('ignore')
 
 # Get the directory of the current script
@@ -148,7 +149,12 @@ if st.button("Predict"):
     display_df = feature_importance[['Feature', 'SHAP Value', 'Feature Value']].copy()
     display_df['SHAP Value'] = display_df['SHAP Value'].apply(lambda x: f"{x:.4f}")
     display_df['Feature Value'] = display_df['Feature Value'].apply(lambda x: f"{x:.4f}")
-    st.dataframe(display_df.reset_index(drop=True), width='stretch')
+    
+    # Use width parameter if available, otherwise fall back to use_container_width
+    try:
+        st.dataframe(display_df.reset_index(drop=True), width='stretch')
+    except TypeError:
+        st.dataframe(display_df.reset_index(drop=True), use_container_width=True)
 
 # Display feature importance
 st.write("---")
