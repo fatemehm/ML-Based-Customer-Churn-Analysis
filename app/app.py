@@ -141,7 +141,7 @@ if st.button("Predict"):
     ax.set_xlabel('SHAP Value (impact on prediction)', fontsize=12)
     ax.set_title('Top 10 Features Impact on Prediction\n(Red = Increases Churn, Blue = Decreases Churn)', fontsize=12)
     plt.tight_layout()
-    st.pyplot(fig, width='stretch')
+    st.pyplot(fig)
     
     # Show the table
     st.write("#### Feature Details:")
@@ -162,4 +162,4 @@ fig2, ax2 = plt.subplots(figsize=(10, 8))
 shap.summary_plot(shap_values_global, X_test, plot_type='bar', show=False, max_display=15)
 plt.title('SHAP Feature Importance (Global - Top 15 Features)', fontsize=14)
 plt.tight_layout()
-st.pyplot(fig2, width='stretch')
+st.pyplot(fig2)
