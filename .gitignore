@@ -1,4 +1,12 @@
-venv/
+../*
+!../data/
+!../notebooks/
+!../diagrams/
+!../app/
+!../models/
+!../tests/
+!../docs/
 __pycache__/
 *.pyc
-.DS_Store
+*.ipynb_checkpoints/
+customer-churn-prediction/
