@@ -23,17 +23,24 @@ pip install -r requirements.txt
 bashstreamlit run app/app.py
 Access at http://localhost:8501
 
-Project Structure
+📁 Project Structure
 ML-Based-Churn-Analysis/
 ├── app/
 │   └── app.py                      # Streamlit web application
 ├── notebooks/
-│   └── churn_prediction.ipynb      # Jupyter notebook with analysis and modeling
-├── diagrams/                        # Plots (EDA, feature importance, SHAP)
-├── models/                          # Saved models (scaler.pkl, lr_model.pkl, etc.)
-├── data/                            # Dataset
+│   └── churn_prediction.ipynb      # Analysis and modeling notebook
+├── diagrams/                        # Visualizations (EDA, SHAP plots)
+├── models/                          # Saved models and scalers
+│   ├── lr_model.pkl
+│   ├── scaler.pkl
+│   ├── X_train.pkl
+│   └── X_test.pkl
+├── data/
+│   └── Telco-Customer-Churn.csv    # Dataset
 ├── requirements.txt                 # Python dependencies
-└── README.md
+├── runtime.txt                      # Python version specification
+└── README.md                        # Project documentation
+
 Results
 
 Churn rate: ~26%
