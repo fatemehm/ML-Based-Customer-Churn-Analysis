@@ -1,29 +1,58 @@
-# Customer Churn Prediction
+# 📊 Customer Churn Prediction
 
-## Overview
-This project predicts customer churn using the Telco-Customer-Churn dataset, featuring EDA, feature engineering, modeling (Logistic Regression, Random Forest, XGBoost), SHAP explainability for Logistic Regression (ROC-AUC: 0.730), and a Streamlit app for deployment.
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.37+-red)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-## Live Demo
+## 🎯 Overview
+This project predicts customer churn using the Telco-Customer-Churn dataset. It features comprehensive exploratory data analysis (EDA), feature engineering, multiple machine learning models (Logistic Regression, Random Forest, XGBoost), SHAP explainability, and an interactive Streamlit web application for real-time predictions.
+
+## 🚀 Live Demo
 **Try the app:** [Customer Churn Prediction App](https://ml-based-customer-churn-analysis-drgzetudpaiinsd9hpsa7k.streamlit.app/)
 
-## Setup
+## ✨ Features
 
-### 1. Clone the repo:
+- **Interactive Web App**: Input customer details and get real-time churn predictions
+- **SHAP Explanations**: Understand which features drive each prediction with visual explanations
+- **Model Comparison**: Evaluated Logistic Regression, Random Forest, and XGBoost
+- **Feature Importance**: Both global and local explanations for model decisions
+- **User-Friendly Interface**: Clean, intuitive design with real-time probability scores
 
-git clone https://github.com/fatemehm/ML-Based-Customer-Churn-Analysis
-cd ML-Based-Churn-Analysis
+## 📈 Results
 
-### 2. Create virtual environment and install dependencies:
+- **Churn Rate**: ~26% of customers
+- **Best Model**: Logistic Regression (ROC-AUC: 0.730)
+- **Top Features Influencing Churn**:
+  - TotalCharges
+  - Tenure
+  - MonthlyCharges
+  - Contract_Month-to-month
+  - TechSupport_No
+  - InternetService_Fiber optic
+  - PaymentMethod_Electronic check
 
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+## 📊 Model Performance
 
-### 3. Run locally:
-bashstreamlit run app/app.py
-Access at http://localhost:8501
+| Model               | ROC-AUC |
+|---------------------|---------|
+| Logistic Regression | 0.74    |
+| Random Forest       | 0.69    |
+| XGBoost             | 0.70    |
 
-📁 Project Structure
+## 🛠️ Technologies Used
+
+- **Languages**: Python 3.11
+- **Data Processing**: pandas, numpy
+- **Machine Learning**: scikit-learn, xgboost
+- **Explainability**: SHAP
+- **Visualization**: matplotlib, seaborn
+- **Web Framework**: Streamlit
+- **Deployment**: Streamlit Community Cloud
+- **Version Control**: Git, GitHub
+
+## 📁 Project Structure
+
+```plaintext
 ML-Based-Churn-Analysis/
 ├── app/
 │   └── app.py                      # Streamlit web application
@@ -40,55 +69,102 @@ ML-Based-Churn-Analysis/
 ├── requirements.txt                 # Python dependencies
 ├── runtime.txt                      # Python version specification
 └── README.md                        # Project documentation
+```
 
-Results
+## 🚀 Setup & Installation
 
-Churn rate: ~26%
-Best model: Logistic Regression (ROC-AUC: 0.730)
-Top features influencing churn:
+### Prerequisites
+- Python 3.11 or higher
+- pip package manager
 
-TotalCharges
-Tenure
-MonthlyCharges
-Contract_Month-to-month
-TechSupport_No
-InternetService_Fiber optic
-PaymentMethod_Electronic check
+### 1. Clone the Repository
+```bash
+git clone https://github.com/fatemehm/ML-Based-Customer-Churn-Analysis.git
+cd ML-Based-Customer-Churn-Analysis
+```
 
+### 2. Create Virtual Environment
+```bash
+# Create virtual environment
+python -m venv venv
 
+# Activate virtual environment
+# On macOS/Linux:
+source venv/bin/activate
 
-Features
+# On Windows:
+venv\Scripts\activate
+```
 
-Interactive Web App: Input customer details and get real-time churn predictions
-SHAP Explanations: Understand which features drive each prediction
-Model Comparison: Logistic Regression, Random Forest, and XGBoost evaluated
-Feature Importance: Global and local explanations for model decisions
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
-🛠️ Technologies Used
+### 4. Run Locally
+```bash
+streamlit run app/app.py
+```
 
-Python: pandas, numpy, scikit-learn, xgboost
-Visualization: matplotlib, seaborn, SHAP
-Web Framework: Streamlit
-Deployment: Streamlit Community Cloud
-Version Control: Git, GitHub
+Access the app at `http://localhost:8501`
 
-Model Performance
---------------------------------
-|Model               | ROC-AUC |
-|--------------------|---------|
-|Logistic Regression |   0.74  |
-|--------------------|---------|
-|Random Forest       |   0.69  |
-|--------------------|---------|
-|XGBoost             |   0.70  |
---------------------------------
+## 📓 Jupyter Notebook
 
-Deployment
+To explore the analysis and model development:
 
-Local: http://localhost:8501
-Cloud: https://ml-based-customer-churn-analysis-drgzetudpaiinsd9hpsa7k.streamlit.app/
+```bash
+jupyter notebook notebooks/churn_prediction.ipynb
+```
 
-Demo Video: https://github.com/fatemehm/ML-Based-Customer-Churn-Analysis/blob/main/Demo_video.mkv
+## 🎥 Demo Video
 
-License
-This project is open source and available under the MIT License.
+Watch the full demonstration of the Customer Churn Prediction app in action:
+
+[![Customer Churn Prediction Demo](https://img.shields.io/badge/Watch-Demo%20Video-red?style=for-the-badge&logo=youtube)](YOUR_VIDEO_LINK_HERE)
+
+*The video showcases:*
+- How to input customer information
+- Real-time churn prediction results
+- SHAP explanations and feature importance visualization
+- Interactive model insights
+
+## 🔍 Key Insights
+
+1. **Contract Type Matters**: Month-to-month contracts have significantly higher churn rates
+2. **Support is Critical**: Customers without tech support are more likely to churn
+3. **Payment Method Impact**: Electronic check payments correlate with higher churn
+4. **Fiber Optic Paradox**: Despite being a premium service, fiber optic customers show higher churn
+5. **Tenure Effect**: Longer customer relationships strongly predict retention
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👤 Author
+
+**Fatemeh M**
+- GitHub: [@fatemehm](https://github.com/fatemehm)
+
+## 🙏 Acknowledgments
+
+- Dataset: [Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) from Kaggle
+- SHAP library for model interpretability
+- Streamlit for the amazing web framework
+
+## 📧 Contact
+
+For questions or feedback, please open an issue on GitHub.
+
+---
+
+⭐ If you found this project helpful, please consider giving it a star!
