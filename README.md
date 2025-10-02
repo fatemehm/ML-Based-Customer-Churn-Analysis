@@ -128,43 +128,9 @@ Watch the full demonstration of the Customer Churn Prediction app in action:
 - SHAP explanations and feature importance visualization
 - Interactive model insights
 
-## 🔍 Key Insights
-
-1. **Contract Type Matters**: Month-to-month contracts have significantly higher churn rates
-2. **Support is Critical**: Customers without tech support are more likely to churn
-3. **Payment Method Impact**: Electronic check payments correlate with higher churn
-4. **Fiber Optic Paradox**: Despite being a premium service, fiber optic customers show higher churn
-5. **Tenure Effect**: Longer customer relationships strongly predict retention
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 📝 License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 👤 Author
 
-**Fatemeh M**
-- GitHub: [@fatemehm](https://github.com/fatemehm)
-
-## 🙏 Acknowledgments
-
-- Dataset: [Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) from Kaggle
-- SHAP library for model interpretability
-- Streamlit for the amazing web framework
-
-## 📧 Contact
-
-For questions or feedback, please open an issue on GitHub.
-
----
-
-⭐ If you found this project helpful, please consider giving it a star!
