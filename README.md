@@ -9,22 +9,22 @@ This project predicts customer churn using the Telco-Customer-Churn dataset, fea
 ## Setup
 
 ### 1. Clone the repo:
-```bash
-git clone https://github.com/fatemehm/customer-churn-prediction.git
-cd customer-churn-prediction
 
-2. Create virtual environment and install dependencies:
+git clone https://github.com/fatemehm/ML-Based-Customer-Churn-Analysis
+cd ML-Based-Churn-Analysis
+
+### 2. Create virtual environment and install dependencies:
 
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
-3. Run locally:
+### 3. Run locally:
 bashstreamlit run app/app.py
 Access at http://localhost:8501
 
 Project Structure
-customer-churn-prediction/
+ML-Based-Churn-Analysis/
 ├── app/
 │   └── app.py                      # Streamlit web application
 ├── notebooks/
