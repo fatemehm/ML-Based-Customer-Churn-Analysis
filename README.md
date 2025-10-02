@@ -21,7 +21,7 @@ This project predicts customer churn using the Telco-Customer-Churn dataset. It 
 ## 📈 Results
 
 - **Churn Rate**: ~26% of customers
-- **Best Model**: Logistic Regression (ROC-AUC: 0.730)
+- **Best Model**: Logistic Regression (ROC-AUC: 0.74)
 - **Top Features Influencing Churn**:
   - TotalCharges
   - Tenure
@@ -120,7 +120,7 @@ jupyter notebook notebooks/churn_prediction.ipynb
 
 Watch the full demonstration of the Customer Churn Prediction app in action:
 
-[![Customer Churn Prediction Demo](https://img.shields.io/badge/Watch-Demo%20Video-red?style=for-the-badge&logo=youtube)](YOUR_VIDEO_LINK_HERE)
+[![Customer Churn Prediction Demo](https://github.com/fatemehm/ML-Based-Customer-Churn-Analysis/blob/main/Demo_video.mkv)]
 
 *The video showcases:*
 - How to input customer information
